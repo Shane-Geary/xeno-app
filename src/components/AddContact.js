@@ -14,12 +14,24 @@ class AddContact extends React.Component {
                 <form>
                     <div>
                         <label>Name</label>
-                        <input type="text" name="name" placeholder="Name" />
+                        <input 
+                        type="text" 
+                        name="name" 
+                        placeholder="Name" 
+                        value={this.state.name}
+                        onChange={ (e) => this.setState({name: e.target.value}) }
+                        />
                     </div>
                     <br />
                     <div>
                         <label>Email</label>
-                        <input type="text" name="email" placeholder="Email" />
+                        <input 
+                        type="text" 
+                        name="email" 
+                        placeholder="Email"
+                        value={this.state.email}
+                        onChange={ (e) => this.setState({email: e.target.value}) } 
+                        />
                     </div>
                     <br />
                     <button className="ui button green">Create</button>
