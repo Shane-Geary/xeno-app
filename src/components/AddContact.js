@@ -5,13 +5,22 @@ class AddContact extends React.Component {
         name: "",
         email: "",
     };
+    
+    add = (e) => {
+        e.preventDefault();
+        if(this.state.name === "" && this.state.email === "") {
+            alert("Make sure to fill in all fields!")
+            return 
+        }
+        console.log(this.state);
+    }
 
     render() {
         return (
             <div className="ui main">
                 <h2>Add Contact</h2>
                 <br />
-                <form>
+                <form onSubmit={this.add}>
                     <div>
                         <label>Name</label>
                         <input 
