@@ -9,6 +9,7 @@ const ContactCard = (props) => {
                 <div className="header">{name}</div>
                 <div>{email}</div>
             </div>
+            <button onClick={() => props.clickHandler(id) }>Delete</button>
         </div>
     );
 }

@@ -19,6 +19,7 @@ function App() {
     const newContactList = contacts.filter((contact => {
       return contact.id !== id;
     }))
+    setContacts(newContactList);
   }
 
   useEffect(() => {
@@ -34,7 +35,7 @@ function App() {
    <div>
      <Header />
      <AddContact addContactHandler={addContactHandler} />
-     <ContactList contacts={contacts} />
+     <ContactList contacts={contacts} getContactId={deleteContactHandler} />
    </div>
   );
 }
